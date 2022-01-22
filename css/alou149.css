@@ -1,0 +1,44 @@
+h1 {
+    font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.position {
+    text-align: center;
+}
+
+.userBox {
+    text-align: left;
+}
+
+.imageProduct {
+    height: 250px;
+    width: 200px;
+}
+
+.searchProduct {
+    width: 100%;
+    background-color: white;
+    text-emphasis-color: blue;
+}
+
+#showProducts {
+    font-size: 15px;
+    text-align: left;
+    border-radius: 50px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 0px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 19px;
+    border-radius: 25px;
+}

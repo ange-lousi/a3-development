@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Home</title>
+    <link rel="icon" href="http://localhost:5000/logo-192x192.png">
+    <link rel="stylesheet" href="alou149.css" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- navigation barrrr -->
+    <nav class="container">
+        <table id="Navbar" style="width: 100%;">
+            <tr style="cursor: pointer;">
+                
+                <td id="logo" class="middle">
+                    <p onclick="backHome()" hspace="10">SHIT</p>
+                </td>
+                <td id="Home" class="position" onclick="homePage();">
+                    Home
+                </td>
+                <td id="Staff" class="position" onclick="staffPage();">
+                    Staff
+                </td>
+                <td id="InstituteShop" class="position" onclick="institutePage();">
+                    Shop
+                </td>
+                <td id="UserRegistration" class="position" onclick="userPage();">
+                    Register
+                </td>
+                <td id="GuestBook" class="position" onclick="guestPage();">
+                    Guest
+                </td>
+                <td id="Login" class="position" onclick="loginPage();">
+                    Login
+                </td>
+            </tr>
+        </table>
+    </nav>
+
+    <p style="text-align: right;" id="loggedIn"></p>
+
+
+    <!-- Home page -->
+
+    <div id="homeSection">
+        <section>
+            <div class="container">
+            <h1>Southern Hemisphere Institute of Technology</h1>
+            <hr>
+            <div class="home-shit">
+            
+            <!-- winnie image -->
+            <p>Southern Hemisphere Institute of Technology is a premiere establishment providing world-class higher education right here in New Zealand. They take pride in what they do to the community at large. The institute's web portal uses a service-oriented
+                architecture.</p>
+            <div>
+                <img width="500px" src="https://www.dailydot.com/wp-content/uploads/2019/04/winnie-the-pooh.jpg" alt="winnie the pooh image">
+                <br>
+                <p>An institutution where dreams are for sleeping</p>
+                <br><br>
+                <p style="font-size: small;" id="testVersion"></p>
+
+            </div>
+        </div>
+    </div>
+        </section>
+        <hr class="homeLine">
+    </div>
+
+    <!-- Staff -->
+    <div id="staffSection" >
+        <section >
+            <div class="container">
+            <h1>
+                Staff Members
+                <hr>
+            </h1>
+            <table id="showStaff" style="width: 100%;"></table>
+        </div>
+        </section>
+    </div>
+
+    <!--  Institute -->
+    <div id="InstituteSection">
+        <section class="container">
+            <h1>
+                Institute Products
+                <hr>
+            </h1>
+            <input class="searchProduct" type="text" id="mySearch" onkeyup="getItems()" placeholder="Search products..">
+            <table id="showProducts" style="width: 100%;"></table>
+        </section>
+    </div>
+
+    <!--  userSection -->
+    <div id="userSection">
+        <section>
+            <div class="container">
+            <h1>
+                User Registration
+                <hr>
+            </h1>
+            <div class="registerClass">
+                <p class="userBox" style="font-weight: bold;">Username:<br>
+                    <input required id="registerName" placeholder="Enter user name here" type="text">
+                </p>
+                <p class="userBox" style="font-weight: bold;">Password:<br>
+                    <input required id="registerPassword" placeholder="Enter password here" type="password">
+                </p>
+                <p class="userBox" style="font-weight: bold;">Address:<br>
+                    <input id="registerAddress" placeholder="Enter address here" type="text">
+                </p>
+            </div>
+            <button class="myButton" onclick="getUserRego()" id="SubmitButton">Register</button>
+            <p id="userrego"></p>
+        </div>
+        </section>
+    </div>
+
+    <!--  guestSection -->
+    <div id="guestSection">
+        <section>
+            <div class="container">
+            <h1>Guest Book
+                <hr>
+            </h1>
+            <p style="font-size: large; font-weight: 700;">Please sign our guest book: </p>
+            <p style="font-weight: 700;">Comments:</p>
+            <div class="commentBox">
+                <textarea id="userComment" placeholder="Your comments here" style="width:50%; height:100px;"></textarea>
+                <br>
+                <input id="userName" placeholder="Enter your name here" type="text" style="width:50%;">
+            </div>
+            <button class="myButton" onclick="postComment()" id="SubmitButton">Submit</button>
+            <br><br>
+            <p style="font-size: large; font-weight: 700;">Recent Comments</p>
+            <div class="moveComments">
+                <iframe id="previousComments" src="http://localhost:5000/api/GetComments"></iframe>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Login -->
+    <div id="loginSection">
+        <section>
+            <div class="container">
+            <h1>
+                Login
+                <hr>
+            </h1>
+            <p class="userBox" style="font-weight: bold;">Username:<br>
+                <input required id="loginName" placeholder="Enter user name here" type="text">
+            </p>
+            <p class="userBox" style="font-weight: bold;">Password:<br>
+                <input required id="loginPassword" placeholder="Enter password here" type="password">
+            </p>
+            <button class="myButton" onclick="getLogin()" id="SubmitButton">Login</button>
+            <p id="validLog"></p>
+
+        </section>
+    </div>
+    </div>
+
+</body>
+<script src="alou149.js"></script>
+
+</html>
